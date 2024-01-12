@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "DS_DIGITAL";
+  src: url("../public/fonts/DS-DIGI.TTF") format("truetype");
+}
+body {
+  background-color: rgb(255, 255, 255);
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app {
+  background-color: #d5d8c2;
+  user-select: none;
+  font-family: "DS_DIGITAL", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 1px;
+  box-shadow: 1px 5px 5px #d5d8c2;
+}
+.calculator-body {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "ac ac backspace operator"
+    "digit digit digit operator"
+    "digit digit digit operator"
+    "digit digit digit operator"
+    "digit digit digit equal";
+  gap: 2px;
+  justify-items: stretch;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  font-size: 1.5rem;
+  min-width: 70px;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  cursor: pointer;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+  background-color: #f1edb9;
+}
+.button:hover {
+  background-color: #ebe6aa;
+}
+.output-group {
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid gray;
+  width: 100%;
+  background-color: bisque;
+}
+.big_button {
+  grid-column: span 2;
+}
+.output {
+  font-size: 30px;
+  text-align: end;
+  color: black;
+  background-color: #4caf50;
+  height: 30px;
+  line-height: 30px;
+}
+.operator0 {
+  grid-area: 1/4/1/5;
+}
+.operator1 {
+  grid-area: 2/4/2/5;
+}
+.operator2 {
+  grid-area: 3/4/3/5;
+}
+.operator3 {
+  grid-area: 4/4/4/5;
+}
+.equals-button {
+  background-color: rgb(145, 110, 64);
+}
+.equals-button:hover {
+  background-color: rgb(179, 142, 94);
+}
