@@ -61,24 +61,10 @@ body {
 .button:hover {
   background-color: #ebe6aa;
 }
-.output-group {
-  box-sizing: border-box;
-  padding: 5px;
-  border: 1px solid gray;
-  width: 100%;
-  background-color: bisque;
-}
-.big_button {
+.big-button {
   grid-column: span 2;
 }
-.output {
-  font-size: 30px;
-  text-align: end;
-  color: black;
-  background-color: #4caf50;
-  height: 30px;
-  line-height: 30px;
-}
+
 .operator0 {
   grid-area: 1/4/1/5;
 }
@@ -96,4 +82,19 @@ body {
 }
 .equals-button:hover {
   background-color: rgb(179, 142, 94);
+}
+.output-group {
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid gray;
+  width: 100%;
+  background-color: bisque;
+}
+.output {
+  font-size: 30px;
+  text-align: end;
+  color: black;
+  background-color: #4caf50;
+  height: 30px;
+  line-height: 30px;
 }

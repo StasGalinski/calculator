@@ -34,8 +34,9 @@ const reducer = (state, { type, payload }) => {
       }
       if (state.currentValue.length >= 1) {
         return { ...state, currentValue: state.currentValue.slice(0, -1) };
+      } else {
+        return state;
       }
-      return { ...state };
     }
     case ACTIONS.CLEAR:
       return {};
@@ -90,7 +91,6 @@ const calculate = ({ previousOperation, previousValue, currentValue }) => {
 };
 function App() {
   const [state, dispatch] = useReducer(reducer, {});
-  console.log(state);
 
   return (
     <div className="app">
@@ -103,15 +103,15 @@ function App() {
         </section>
 
         <div className="container">
-          <button className="button big_button" onClick={() => dispatch({ type: ACTIONS.CLEAR })}>
-            CLEAR
+          <button className="button big-button" onClick={() => dispatch({ type: ACTIONS.CLEAR })}>
+            C
           </button>
           <button className="button icon" onClick={() => dispatch({ type: ACTIONS.REMOVE_DIGIT })} type="button">
             <IoBackspaceSharp />
           </button>
           <DigitButtons dispatch={dispatch} />
           <OperatorButtons dispatch={dispatch} />
-          <button className="button big_button equals-button" onClick={() => dispatch({ type: ACTIONS.SHOW_RESULT })}>
+          <button className="button big-button equals-button" onClick={() => dispatch({ type: ACTIONS.SHOW_RESULT })}>
             =
           </button>
         </div>

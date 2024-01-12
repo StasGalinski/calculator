@@ -1,8 +1,8 @@
 import { ACTIONS } from "../App";
 import { Fragment } from "react";
 export default function DigitButtons({ dispatch }) {
-  const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."];
-  const renderedButtons = numbers.map((item) => {
+  const digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."];
+  const renderedButtons = digits.map((item) => {
     const clickHandler = () => {
       dispatch({ type: ACTIONS.ADD_DIGIT, payload: { digit: item } });
     };
